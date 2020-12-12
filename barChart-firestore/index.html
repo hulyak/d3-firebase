@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bar Chart</title>
+  </head>
+  <body>
+    <div class="canvas"></div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyB9s-1PNbZbomaic0TI-VIP3OOt3P5p4tE",
+        authDomain: "d3-project-b0108.firebaseapp.com",
+        projectId: "d3-project-b0108",
+        storageBucket: "d3-project-b0108.appspot.com",
+        messagingSenderId: "752352163777",
+        appId: "1:752352163777:web:d708667d36ad2141926140",
+        measurementId: "G-DBNZQDCC7T",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      // initialize Firestore
+      const db = firebase.firestore();
+      db.settings({timestampsInSnapshots: true})
+      
+    </script>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
