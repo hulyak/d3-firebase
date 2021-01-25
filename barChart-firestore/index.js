@@ -17,6 +17,9 @@ const graph = svg
   .attr("height", graphHeight)
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+  graph.append('rect');
+graph.append('rect');
+graph.append('rect');
 const xAxisGroup = graph
   .append("g") // group
   .attr("transform", `translate(0, ${graphHeight})`);
@@ -57,6 +60,8 @@ db.collection("dishes")
 
     // join the data to rects
     const rects = graph.selectAll("rect").data(data);
+
+    console.log(rects);
 
     rects
       .attr("width", x.bandwidth) // don't invoke
